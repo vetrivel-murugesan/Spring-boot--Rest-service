@@ -35,7 +35,7 @@ public class EmployeeController {
 		return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
 	}
 	@GetMapping("")
-	public List<Employee> getAllEmployee(@PathVariable int id) {
+	public List<Employee> getAllEmployee() {
 		List<Employee> empList =  new ArrayList<Employee>();
 		employeeRepository.findAll().forEach(empList :: add);
 		return empList;
